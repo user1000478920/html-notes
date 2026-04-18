@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <fieldset class="input">
+   <legend>create/edit note</legend>
+   <sub class="err" id="titleerr" style="display:none;">
+     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+       <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
+     </svg>
+     title cannot be empty
+   </sub>
+   <input type="text" placeholder="title" required id="title" maxlength="25" autofocus>
+   <br>
+   <sub class="err" id="contenterr" style="display:none;">
+     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+       <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
+     </svg>
+     content cannot be empty
+   </sub>
+   <textarea style="overflow:hidden; resize:none;" placeholder="content" id="content" required></textarea>
+  <br><button onclick="create()">save</button>
+  </fieldset>
+  <br>
+  <fieldset>
+   <legend>saved notes</legend>
+   <button onclick="clearNotes()">clear all notes</button>
+   <br />
+   <div id="notes"></div>
+  </fieldset>
+  <script src="script.js"></script>
+</body>
+</html>

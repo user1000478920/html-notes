@@ -1,0 +1,130 @@
+body{
+  font-family: "Helvetica", "Arial", sans-serif;
+  background: AntiqueWhite;
+}
+input{
+  min-width: 0;
+  width:94%;
+}
+input,textarea{
+  padding: 2px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  font-family: "Helvetica", "Arial", sans-serif;
+  border: 1px solid gray;
+  border-radius: 2px;
+  accent-color: BurlyWood;
+  background: transparent;
+  min-width: 0;
+  max-width: 100%;
+  white-space: nowrap;
+  field-sizing: fixed;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing: border-box;
+}
+textarea{
+  width: 95%;
+  height: fit-content;
+  field-sizing: fixed;
+  border: 1px solid gray;
+  min-height: 20h;
+}
+button{
+  background: inherit;
+  border: 1px solid gray;
+  border-radius: 2px;
+  transition: transform 0.05s ease;
+}
+button:active{
+  transform: scale(0.95);
+  transform: translateY(2px);
+  opacity: 0.6;
+  border: 2px solid BurlyWood;
+}
+button:hover{
+  border: 1px solid BurlyWood;
+  opacity: 0.8;
+}
+legend{
+  border: 1px solid black;
+  user-select: none;
+  border-radius: 2px;
+}
+fieldset{
+  border: 1px solid black;
+  border-radius: 2px;
+  max-width: 100%;
+}
+.input{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+.err{
+  color: red;
+/*  font-size: 0.7em; 
+  padding-bottom: 0;
+  margin-bottom: 0;
+  float: bottom; */
+  user-select: none
+}
+.errbox{
+  border: 1px solid red;
+}
+#notes{
+  padding-top:4px;
+}
+summary{
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3em;
+  user-select: none;
+  padding: 2px 2px;
+  border-radius:4px;
+}
+summary { list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary button{
+  margin-right: 2px;
+  float: right;
+  font-size: 0.6em;
+  aspect-ratio: 1/1;
+}
+svg{
+  height: 0.9em;
+  width: 0.9em;
+  margin-bottom: -1.5%;
+}
+details:nth-child(even) summary{
+  background: NavajoWhite;
+}
+details:nth-child(odd) summary{
+  background: Bisque;
+}
+details{
+  padding: 2px 4px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+  max-width: 100%;
+}
+details[open]{
+  border: 2px solid BurlyWood;
+}
+p{
+  margin: 4px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+p *{
+min-width: 0;
+max-width: 100%;
+box-sizing: border-box;
+white-space: normal;
+}
